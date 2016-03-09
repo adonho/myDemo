@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="baseDAO" class="com.mobile.framework.dao.hibernate.BaseDAOHibernateActive">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- 2014-08-05 add supervisor begin -->
+    <bean id="baseSupervisorDAO" class="com.mobile.framework.dao.hibernate.BaseDAOHibernateActive">
+        <property name="sessionFactory"><ref bean="supervisorSessionFactory"/></property>
+    </bean>
+    <!-- 2014-08-05 add supervisor end -->
+
+    <bean id="mYBaseDAO" class="com.blossom.temp.jazz.BaseDAOHibernate" >
+        <description>DAO层处理通用处理类</description>
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- 2014-08-05 add supervisor begin -->
+    <bean id="mYBaseSupervisorDAO" class="com.blossom.temp.jazz.BaseDAOHibernate" >
+        <description>DAO层处理通用处理类</description>
+        <property name="sessionFactory"><ref bean="supervisorSessionFactory"/></property>
+    </bean>
+    <!-- 2014-08-05 add supervisor begin -->
+
+    <!-- 2015-01-27 add rztDB begin -->
+    <bean id="mYBaseRztDAO" class="com.blossom.temp.jazz.BaseDAOHibernate" >
+        <description>DAO层处理通用处理类</description>
+        <property name="sessionFactory"><ref bean="rztSessionFactory"/></property>
+    </bean>
+    <!-- 2015-01-27 add rztDB begin -->
+</beans>
+

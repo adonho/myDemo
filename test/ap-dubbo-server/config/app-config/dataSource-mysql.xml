@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="searchSystemEnvironment" value="true"/>
+        <property name="location" value="file:${rzcEnvFilePath}"/>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.main.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.main.username}"/>
+        <property name="password" value="${db.main.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="200"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+
+    <!-- 2013-04-16 zhangshsh add begin -->
+    <bean id="dataSourceMyData" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.sms.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.sms.username}"/>
+        <property name="password" value="${db.sms.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="100"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!-- 2013-04-16 zhangshsh add end -->
+
+    <!-- 2013-12-02 lubo add begin -->
+    <bean id="dataSourceSysMsg" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for test MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.sysmsg.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.sysmsg.username}"/>
+        <property name="password" value="${db.sysmsg.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="50"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!-- 2013-04-16 zhangshsh add end -->
+
+    <!--2014-02-18 zengjh add begin-->
+    <bean id="dataSourceSalary" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for test MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.salary.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.salary.username}"/>
+        <property name="password" value="${db.salary.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="50"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!--2014-02-18 zengjh add end-->
+
+    <!--2014-08-05 add supervisor begin-->
+    <bean id="dataSourceSupervisor" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for test MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.supervisor.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.supervisor.username}"/>
+        <property name="password" value="${db.supervisor.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="50"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!--2014-08-05 add supervisor end -->
+    <!--2014-09-13 anyunliang add begin-->
+    <bean id="dataSourceOpenFire" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for test MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.openfire.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.openfire.username}"/>
+        <property name="password" value="${db.openfire.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="50"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!--2014-09-13 anyunliang add end-->
+
+    <!-- 2015-01-27 add rztDb begin -->
+    <bean id="dataSourceRzt" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.rzt.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.rzt.username}"/>
+        <property name="password" value="${db.rzt.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="200"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+    <!-- 2015-01-27 add rztDb end -->
+</beans>

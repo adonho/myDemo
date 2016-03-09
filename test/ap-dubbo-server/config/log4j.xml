@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C %M- %m\n"/>
+        </layout>
+    </appender>
+
+    <appender name="errorLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/log/blossomlog/apDubboServer/error.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="ERROR"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+
+    <appender name="serverLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="threshold" value="WARN"/>
+
+        <param name="file" value="/log/blossomlog/apDubboServer/server.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+    </appender>
+
+    <appender name="dubboLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="threshold" value="INFO"/>
+
+        <param name="file" value="/log/blossomlog/apDubboServer/dubbo.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+    </appender>
+
+    <appender name="blossomLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="threshold" value="WARN"/>
+
+        <param name="file" value="/log/blossomlog/apDubboServer/blossom.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+    </appender>
+
+    <appender name="smsLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/log/blossomlog/apDubboServer/smslog.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+    </appender>
+
+    <!-- category begin -->
+    <category name="com.alibaba.dubbo">
+        <priority value="INFO"/>
+        <appender-ref ref="dubboLogFile"/>
+    </category>
+
+    <category name="com.blossom">
+        <priority value="WARN"/>
+        <appender-ref ref="blossomLogFile"/>
+    </category>
+
+    <category name="com.blossom.common.sms.bl.impl.SMSManagerImpl" additivity="false">
+        <priority value="INFO"/>
+        <appender-ref ref="smsLogFile"/>
+    </category>
+
+    <root>
+        <priority value="WARN"/>
+        <appender-ref ref="serverLogFile"/>
+        <appender-ref ref="errorLogFile"/>
+    </root>
+
+    <appender name="cacheLogFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/log/blossomlog/apDubboServer/cache.log"/>
+        <param name="encoding" value="utf-8"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5p %C-%M(%L): %m\n"/>
+        </layout>
+    </appender>
+
+    <category name="com.blossom.common.cache" additivity="false">
+        <priority value="INFO"/>
+        <appender-ref ref="cacheLogFile"/>
+    </category>
+
+</log4j:configuration>
+
+
+        <!--
+           Log4J Configuration Quick Reference:
+           ====================================
+
+           Priority order is DEBUG < INFO < WARN < ERROR < FATAL
+
+           PatternLayout conversion characters:
+
+            %c   Category of the logging event
+            %C   Fully qualified class name of the caller
+            %d   Date of the logging event  (example: %d{HH:mm:ss,SSS} )
+            %F   File name where the logging request was issued (caution: extremely slow)
+            %l   Location information of the caller (caution: extremely slow)
+            %L   Line number from where the logging request was issued (caution: extremely slow)
+            %m   Application-supplied message
+            %M   Method name from where the logging request was issued (caution: extremely slow)
+            %n   Line separator
+            %p   Priority of the logging event
+            %r   Number of milliseconds since the start of the application
+            %t   Name of the thread that generated the logging event
+            %x   Nested diagnotic context associated with the thread
+            %%   A single percent sign
+
+           Format modifiers examples:
+
+            %20c     Left pad with spaces if category is less than 20 characters long
+            %-20c    Right pad with spaces if category is less than 20 characters long
+            %.30c    Truncate from the beginning if category is more than 30 chars long
+            %20.30c  Left pad 20 chars + truncate from beginning if more than 30 chars
+            %-20.30c Right pad 20 chars + truncate from beginning if more than 30 chars
+
+           Examples:  "%r [%t] %-5p %c %x - %m\n"
+                      "%-6r [%15.15t] %-5p %30.30c %x - %m\n"
+
+        -->

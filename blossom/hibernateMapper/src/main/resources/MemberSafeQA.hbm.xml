@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.demo.bean.MemberSafeQA" table="tb_member_safe_qa">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <many-to-one name="memberSafe" class="com.demo.bean.MemberSafe" fetch="select" lazy="false">
+            <column name="member_safe_id">
+                <comment>关联外键</comment>
+            </column>
+        </many-to-one>
+        <property name="question" type="java.lang.String">
+            <column name="question">
+                <comment>问题</comment>
+            </column>
+        </property>
+        <property name="answer" type="java.lang.String">
+            <column name="answer">
+                <comment>答案</comment>
+            </column>
+        </property>
+        <property name="state" type="java.lang.Short">
+            <column name="state">
+                <comment>状态：0，无效；1，有效</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="create_date">
+                <comment>创建日期</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

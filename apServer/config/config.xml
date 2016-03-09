@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+        <!-- 2013-10-25 zhangshsh add this file -->
+
+<properties version="1.0">
+<comment>服务器配置文件</comment>
+
+<entry key="mail.sender.account">${mail.sender.account}</entry>
+<entry key="mail.sender.password">${mail.sender.password}</entry>
+
+</properties>

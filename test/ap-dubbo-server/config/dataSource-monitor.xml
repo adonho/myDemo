@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <dataSource id="dataSource" >
+        <serviceItem name="com.blossom.information.bl.SearchIndexManager" />
+        <serviceItem name="com.blossom.harborII.bl.OutterModuleIfcManager" />
+        <serviceItem name="com.blossom.agr.service.SigningTableService" />
+        <serviceItem name="com.blossom.member.bl.MemberManager" />
+    </dataSource>
+
+    <dataSource id="dataSourceOpenFire" >
+        <serviceItem name="com.blossom.web.communication.bl.ChatMessageManager" />
+        <serviceItem name="com.blossom.web.communication.bl.ChatAnonymousInfoManager" />
+        <serviceItem name="com.blossom.web.communication.bl.MucManager" />
+        <serviceItem name="com.blossom.web.communication.bl.PartnerManager" />
+    </dataSource>
+
+</root>

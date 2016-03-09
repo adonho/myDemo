@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- 说明：apInterval apTimeout,单位：ms, s, m, h  -->
+    <!-- 运行条件-->
+    <!-- 说明：机房状态：1:在主机房;  0:在备机房; 默认：0-->
+    <!-- 说明：AP状态： 1:主;  0:备;  默认：0-->
+
+    <!-- ap-dubbo-server monitor agent -->
+    <ap name="webAppMonitor-apDubboServer" description="ap-dubbo-server" apInterval="5s" apTimeout="30s" expectedMasterApNum="1">
+        <runCondition  houseStatus="1" apStatus="1" />
+    </ap>
+</root>

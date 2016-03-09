@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="serviceLocator" class="com.demo.common.util.ServiceLocator"  lazy-init="false"/>
+
+    <bean id="memCachedClient" class="net.rubyeye.xmemcached.utils.XMemcachedClientFactoryBean">
+        <property name="servers">
+            <value>127.0.0.1:11211</value>
+        </property>
+        <property name="weights">
+            <list>
+                <value>1</value>
+                <value>1</value>
+            </list>
+        </property>
+        <property name="connectionPoolSize" value="5"></property>
+        <property name="sessionLocator">
+            <bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
+        </property>
+        <property name="transcoder">
+            <bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder"/>
+        </property>
+        <property name="bufferAllocator">
+            <bean class="net.rubyeye.xmemcached.buffer.SimpleBufferAllocator"></bean>
+        </property>
+    </bean>
+
+    <!-- 2013-07-10 zhangshsh add begin -->
+    <bean id="memCachedClientApStatus" class="net.rubyeye.xmemcached.utils.XMemcachedClientFactoryBean">
+        <property name="servers">
+            <value>${memcache.server.a.url}</value>
+        </property>
+        <property name="connectionPoolSize" value="1"></property>
+        <property name="sessionLocator">
+            <bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
+        </property>
+        <property name="transcoder">
+            <bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder"/>
+        </property>
+        <property name="bufferAllocator">
+            <bean class="net.rubyeye.xmemcached.buffer.SimpleBufferAllocator"></bean>
+        </property>
+    </bean>
+    <!-- 2013-07-10 zhangshsh add begin -->
+
+</beans>

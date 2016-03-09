@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- 2013-05-07 zhangshsh add this file -->
+
+<properties version="1.0">
+   <comment>服务器配置文件. 修改后立即生效,不需要重启服务器.</comment>
+
+    <!-- 短信通道 -->
+    <!-- 通道号 0: ORIGINAL; 1: MONTNET; 2: UMS; 3: SMS_MODEM; 4: SMS_MODEM_B; 5: SMS_MODEM_C; default:0 -->
+    <!-- 短信通道 enable指定  -->
+    <entry key="sms.channel.0.enable">0</entry>
+    <entry key="sms.channel.1.enable">0</entry>
+    <entry key="sms.channel.2.enable">0</entry>
+    <entry key="sms.channel.3.enable">1</entry>
+    <entry key="sms.channel.4.enable">1</entry>
+    <entry key="sms.channel.5.enable">1</entry>
+
+    <!-- 短信通道指定  -->
+    <entry key="sms.channel.vendor">0</entry>
+    <!-- 权重 0-100; default:100 -->
+    <entry key="sms.channel.weight">100</entry>
+    <!-- 发送失败重试次数 0-10; default:3 -->
+    <entry key="sms.channel.retry.num">3</entry>
+    <!-- 发送失败重试间隔 0-30秒; default:3秒 -->
+    <entry key="sms.channel.retry.interval">3</entry>
+    <!-- 通道故障时输出的报告文件-->
+    <entry key="sms.channel.fail.report.file">/log/blossomlog/sms-fail.txt</entry>
+
+    <!-- MONTNET 通道 url-->
+    <entry key="sms.channel.montnet.url">${sms.channel.montnet.url}?userId=${sms.channel.montnet.userId}&amp;password=${sms.channel.montnet.password}&amp;pszMobis=</entry>
+    <entry key="sms.channel.montnet.statusReport.url">${sms.channel.montnet.statusReport.url}?userId=${sms.channel.montnet.userId}&amp;password=${sms.channel.montnet.password}</entry>
+
+    <!-- UMS 通道 url-->
+    <entry key="sms.channel.ums.url">${sms.channel.ums.url}</entry>
+    <entry key="sms.channel.ums.statusReport.url">${sms.channel.ums.statusReport.url}</entry>
+    <!-- UMS 通道 SpCode-->
+    <entry key="sms.channel.ums.spCode">${sms.channel.ums.spCode}</entry>
+    <!-- UMS 通道 userid-->
+    <entry key="sms.channel.ums.userId">${sms.channel.ums.userId}</entry>
+    <!-- UMS 通道 password-->
+    <entry key="sms.channel.ums.password">${sms.channel.ums.password}</entry>
+
+    <!-- 短信猫 server url -->
+    <entry key="sms.channel.modem.server.url">http://${sms.channel.modem.server.ip}:9618/User=${sms.channel.modem.server.userId},Password=${sms.channel.modem.server.password}</entry>
+    <!-- 短信猫 serverB url -->
+    <entry key="sms.channel.modem.b.server.url">http://${sms.channel.modem.b.server.ip}:9618/User=${sms.channel.modem.b.server.userId},Password=${sms.channel.modem.b.server.password}</entry>
+    <!-- 短信猫 serverC url -->
+    <entry key="sms.channel.modem.c.server.url">http://${sms.channel.modem.c.server.ip}:9618/User=${sms.channel.modem.c.server.userId},Password=${sms.channel.modem.c.server.password}</entry>
+
+    <!-- 验证码相关的短信，如果目标手机号是中国移动或中国电信，同时复制一份短信到特定手机号 -->
+    <!-- 复制 enable  1:启用; 其它: 禁用; default:0 -->
+    <entry key="sms.replication.enable">0</entry>
+    <!-- 复制短信所发向的特定手机号 -->
+    <entry key="sms.replication.target.no">replicationTargetNo</entry>
+
+    <!-- 数据导出任务-->
+    <!-- 数据导出任务最大保存天数(default:90天),范围:1天 - 5*365天(5年) -->
+    <entry key="data.output.task.max.days">365</entry>
+
+    <!-- 短信发送任务-->
+    <!-- 短信发送状态报告取回前置时间(default:60秒),范围:1秒 - 30*60秒(30分) -->
+    <entry key="sms.send.status.fetch.before">60</entry>
+    <!-- 短信发送任务最大保存天数(default:90天),范围:1天 - 5*365天(5年) -->
+    <entry key="sms.send.task.max.days">365</entry>
+    <!-- 短信发送history 最大保存天数(default:90天),范围:1天 - 5*365天(5年) -->
+    <entry key="sms.send.history.max.days">365</entry>
+    <!-- 短信发送状态报告 最大保存天数(default:90天),范围:1天 - 5*365天(5年) -->
+    <entry key="sms.send.status.report.max.days">365</entry>
+
+    <!--  通信服务器IP  -->
+    <entry key="chatServer">${chat.server.ip}</entry>
+
+    <!-- 页面静态化 site urlPrefix  -->
+    <entry key="page.static.site.1.urlPrefix">${page.static.site.1.urlPrefix}</entry>
+    <entry key="page.static.site.2.urlPrefix">${page.static.site.2.urlPrefix}</entry>
+
+   <!-- AP 业务状态报告文件名 -->
+    <entry key="ap.business.status.report.file">/log/blossomlog/apBusinessStatusReport.txt</entry>
+
+    <!-- 银行入账单超时时间(default:604800s 7天) -->
+    <entry key="super.bank.in.over.time">604800</entry>
+
+    <!-- dubbo master flag -->
+    <entry key="dubbo.master.flag">${db.main.master}</entry>
+    <!-- 从库dataSource监视间隔（秒） -->
+    <entry key="slave.dataSource.monitor.interval">30</entry>
+    <!-- 从库dataSource监视最大故障次数 -->
+    <entry key="slave.dataSource.monitor.maxFailureCount">10</entry>
+
+    <!-- 从库需要导出的dubbo service名列表 -->
+    <entry key="slave.exported.service.name.list">
+        com.blossom.information.bl.SearchIndexManager,
+        com.blossom.harborII.bl.OutterModuleIfcManager,
+        com.blossom.agr.service.SigningTableService,
+        com.blossom.web.communication.bl.ChatMessageManager,
+        com.blossom.web.communication.bl.ChatAnonymousInfoManager,
+        com.blossom.web.communication.bl.MucManager,
+        com.blossom.web.communication.bl.PartnerManager,
+        com.blossom.member.bl.MemberManager,
+        com.blossom.common.sms.bl.SMSManager,
+        com.blossom.admin.mobile.bl.SoftwareInfoManager
+    </entry>
+
+    <!-- 激活监管通-建议注资金额 -->
+    <entry key="super.active.bank.in.propose.amount">任意金额</entry>
+
+    <!-- 消息服务(activemq) -->
+    <entry key="msg.service.enable">0</entry>
+    <entry key="msg.service.url">failover:(tcp://127.0.0.1:61616)</entry>
+    <entry key="msg.service.user"></entry>
+    <entry key="msg.service.password"></entry>
+    <!-- 需要接收消息的queue名称列表。多个之间以,分隔 -->
+    <entry key="msg.service.receive.destination.queues">queue_dubbo</entry>
+    <!-- 需要接收消息的topic名称列表。多个之间以,分隔 -->
+    <entry key="msg.service.receive.destination.topics">topic_dubbo</entry>
+</properties>

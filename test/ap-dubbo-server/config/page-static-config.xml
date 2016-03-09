@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!-- 说明：expireTime,单位：s, m, h, d  -->
+    <!-- 前台中文版网站 -->
+    <site id="1" targetCachePathPrefix="/data/page-staticized-cache/blossomWeb" targetPathPrefix="/data/webapp/blossomWeb">
+        <item url="/index.jsp" targetFileName="/index.html" expireTime="1m" repeatable="true"/>
+        <item url="/logon/index.jsp" targetFileName="/logon/index.html" expireTime="1d" repeatable="true"/>
+
+        <!--页面底部链接-->
+        <item url="/financing/finance.jsp" targetFileName="/financing/finance.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/investment.jsp" targetFileName="/financing/investment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/capital.jsp" targetFileName="/financing/capital.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/moneymanagement.jsp" targetFileName="/financing/moneymanagement.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/loanable.jsp" targetFileName="/financing/loanable.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/pawnee.jsp" targetFileName="/financing/pawnee.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/guarantee.jsp" targetFileName="/financing/guarantee.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/renting.jsp" targetFileName="/financing/renting.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/venturer.jsp" targetFileName="/financing/venturer.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/imbarkinvestment.jsp" targetFileName="/financing/imbarkinvestment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/monetary.jsp" targetFileName="/financing/monetary.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/lendmoney.jsp" targetFileName="/financing/lendmoney.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/creditable.jsp" targetFileName="/financing/creditable.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/venture.jsp" targetFileName="/financing/venture.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/project.jsp" targetFileName="/financing/project.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/merchants.jsp" targetFileName="/financing/merchants.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/microloan.jsp" targetFileName="/financing/microloan.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/privatelending.jsp" targetFileName="/financing/privatelending.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/angelinvestment.jsp" targetFileName="/financing/angelinvestment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/foundation.jsp" targetFileName="/financing/foundation.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/affiance.jsp" targetFileName="/financing/affiance.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/assets.jsp" targetFileName="/financing/assets.html" expireTime="7d" repeatable="true"/>
+
+        <item url="/service/tower.jsp" targetFileName="/service/tower.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/center.jsp" targetFileName="/service/center.html" expireTime="7d" repeatable="true"/>
+        <item url="/harborII/welcomeAction!welcome.dox" targetFileName="/harborII/welcome.html" expireTime="10m"  repeatable="true"/>
+        <item url="/information/index.jsp" targetFileName="/information/index.html" expireTime="5m" repeatable="true"/>
+
+        <!--约会大厅-->
+        <item url="/marketing/index.jsp" targetFileName="/marketing/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/marketing/mark_index.jsp" targetFileName="/marketing/mark_index.html" expireTime="10m" repeatable="true"/>
+        <item url="/financier/financier_club.jsp" targetFileName="/financier/financier_club.html" expireTime="10m" repeatable="true"/>
+        <item url="/marketing/marketing_ymzs_f.jsp" targetFileName="/marketing/marketing_ymzs_f.html" expireTime="10m" repeatable="true"/>
+
+        <!--认证大厅-->
+        <item url="/certificate/index.do" targetFileName="/certificate/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/certificate/certificate_shl.jsp" targetFileName="/certificate/certificate_shl.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/supportCenter.do" targetFileName="/certificate/supportCenter.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/enterpriseList.do" targetFileName="/certificate/enterpriseList.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/certificate_gurzzx.jsp" targetFileName="/certificate/certificate_gurzzx.html" expireTime="7d" repeatable="true"/>
+
+        <!--赛事大厅-->
+        <item url="/match/index.jsp" targetFileName="/match/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/jbpzq/index.jsp" targetFileName="/match/jbpzq/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/all_activity.jsp" targetFileName="/match/all_activity.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/sportsMatchNoticeList.do" targetFileName="/match/sportsMatchNoticeList.html" expireTime="10m" repeatable="true"/>
+
+        <!--融资城学院-->
+        <item url="/fcc/index.do" targetFileName="/fcc/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/fcc/learningHall.do" targetFileName="/fcc/learningHall.html" expireTime="10m" repeatable="true"/>
+        <item url="/fcc/qualification.jsp" targetFileName="/fcc/qualification.html" expireTime="7d" repeatable="true"/>
+        <item url="/fcc/information.do" targetFileName="/fcc/information.html" expireTime="10m" repeatable="true"/>
+        <item url="/forum/forumIndex.do" targetFileName="/forum/forumIndex.html" expireTime="10m" repeatable="true"/>
+        <item url="/hr/index1.jsp" targetFileName="/hr/index1.html" expireTime="1d" repeatable="true"/>
+        <item url="/hr/about.jsp" targetFileName="/hr/about.html" expireTime="1d" repeatable="true"/>
+        <item url="/hr/iamin352.do" targetFileName="/hr/iamin352.html" expireTime="1d" repeatable="true"/>
+        <item url="/fcc/introduction.jsp" targetFileName="/fcc/introduction.html" expireTime="7d" repeatable="true"/>
+
+        <!--资讯大厅-->
+        <item url="/news/index.jsp" targetFileName="/news/index.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/expert_view_list.jsp" targetFileName="/news/expert_view_list.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1742&amp;root=yes" targetFileName="/news/newslist_ttid-1742_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1743" targetFileName="/news/newslist_ttid-1743.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1744" targetFileName="/news/newslist_ttid-1744.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1745" targetFileName="/news/newslist_ttid-1745.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1746" targetFileName="/news/newslist_ttid-1746.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1747" targetFileName="/news/newslist_ttid-1747.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1748" targetFileName="/news/newslist_ttid-1748.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1749" targetFileName="/news/newslist_ttid-1749.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1750" targetFileName="/news/newslist_ttid-1750.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1751" targetFileName="/news/newslist_ttid-1751.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1752" targetFileName="/news/newslist_ttid-1752.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1753" targetFileName="/news/newslist_ttid-1753.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1754" targetFileName="/news/newslist_ttid-1754.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1755" targetFileName="/news/newslist_ttid-1755.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1756" targetFileName="/news/newslist_ttid-1756.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1757" targetFileName="/news/newslist_ttid-1757.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1758" targetFileName="/news/newslist_ttid-1758.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1759" targetFileName="/news/newslist_ttid-1759.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1760" targetFileName="/news/newslist_ttid-1760.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1761" targetFileName="/news/newslist_ttid-1761.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1762" targetFileName="/news/newslist_ttid-1762.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1763" targetFileName="/news/newslist_ttid-1763.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1764" targetFileName="/news/newslist_ttid-1764.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1772" targetFileName="/news/newslist_ttid-1772.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1773" targetFileName="/news/newslist_ttid-1773.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1774" targetFileName="/news/newslist_ttid-1774.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1844&amp;root=yes" targetFileName="/news/newslist_ttid-1844_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1845" targetFileName="/news/newslist_ttid-1845.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1846" targetFileName="/news/newslist_ttid-1846.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1847" targetFileName="/news/newslist_ttid-1847.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2027" targetFileName="/news/newslist_ttid-2027.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1849&amp;root=yes" targetFileName="/news/newslist_ttid-1849_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1850" targetFileName="/news/newslist_ttid-1850.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1851" targetFileName="/news/newslist_ttid-1851.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2023" targetFileName="/news/newslist_ttid-2023.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=426" targetFileName="/news/newslist_ttid-426.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=428" targetFileName="/news/newslist_ttid-428.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=428&amp;root=yes" targetFileName="/news/newslist_ttid-428_root-yes.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=2024&amp;root=yes" targetFileName="/news/newslist_ttid-2024_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2025" targetFileName="/news/newslist_ttid-2025.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2026" targetFileName="/news/newslist_ttid-2026.html" expireTime="5m" repeatable="true"/>
+
+        <!--帮助中心-->
+        <item url="/help/index.jsp" targetFileName="/help/index.html" expireTime="1h" repeatable="true"/>
+
+        <!--网安大厅-->
+        <item url="/safewall/index.do" targetFileName="/safewall/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/queryCooperation.do" targetFileName="/safewall/queryCooperation.html" expireTime="1d"  repeatable="true"/>
+        <item url="/safewall/moreBlacklist.do" targetFileName="/safewall/moreBlacklist.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/moreKnowledge.do" targetFileName="/safewall/moreKnowledge.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/law.jsp" targetFileName="/safewall/law.html" expireTime="1d" repeatable="true"/>
+
+        <!--底部-->
+        <item url="/include/floor_html.jsp" targetFileName="/include/floor_html.html" expireTime="7d" repeatable="true"/>
+
+        <!--服务大厦平面图-->
+        <item url="/service/floor_map_01.jsp" targetFileName="/service/floor_map_01.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_02.jsp" targetFileName="/service/floor_map_02.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_03.jsp" targetFileName="/service/floor_map_03.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_04.jsp" targetFileName="/service/floor_map_04.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_05.jsp" targetFileName="/service/floor_map_05.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_06.jsp" targetFileName="/service/floor_map_06.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_07.jsp" targetFileName="/service/floor_map_07.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_08.jsp" targetFileName="/service/floor_map_08.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_09.jsp" targetFileName="/service/floor_map_09.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_10.jsp" targetFileName="/service/floor_map_10.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_11.jsp" targetFileName="/service/floor_map_11.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/floor_map_12.jsp" targetFileName="/service/floor_map_12.html" expireTime="7d" repeatable="true"/>
+    </site>
+
+    <!-- 前台英文版网站 -->
+    <site id="2" targetCachePathPrefix="/data/page-staticized-cache/blossomWeb_en" targetPathPrefix="/data/webapp/blossomWeb_en">
+        <item url="/index.jsp" targetFileName="/index.html" expireTime="1m" repeatable="true"/>
+        <item url="/logon/index.jsp" targetFileName="/logon/index.html" expireTime="1d" repeatable="true"/>
+
+        <item url="/financing/finance.jsp" targetFileName="/financing/finance.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/investment.jsp" targetFileName="/financing/investment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/capital.jsp" targetFileName="/financing/capital.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/moneymanagement.jsp" targetFileName="/financing/moneymanagement.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/loanable.jsp" targetFileName="/financing/loanable.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/pawnee.jsp" targetFileName="/financing/pawnee.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/guarantee.jsp" targetFileName="/financing/guarantee.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/renting.jsp" targetFileName="/financing/renting.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/venturer.jsp" targetFileName="/financing/venturer.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/imbarkinvestment.jsp" targetFileName="/financing/imbarkinvestment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/monetary.jsp" targetFileName="/financing/monetary.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/lendmoney.jsp" targetFileName="/financing/lendmoney.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/creditable.jsp" targetFileName="/financing/creditable.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/venture.jsp" targetFileName="/financing/venture.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/project.jsp" targetFileName="/financing/project.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/merchants.jsp" targetFileName="/financing/merchants.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/microloan.jsp" targetFileName="/financing/microloan.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/privatelending.jsp" targetFileName="/financing/privatelending.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/angelinvestment.jsp" targetFileName="/financing/angelinvestment.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/foundation.jsp" targetFileName="/financing/foundation.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/affiance.jsp" targetFileName="/financing/affiance.html" expireTime="7d" repeatable="true"/>
+        <item url="/financing/assets.jsp" targetFileName="/financing/assets.html" expireTime="7d" repeatable="true"/>
+
+        <item url="/service/tower.jsp" targetFileName="/service/tower.html" expireTime="7d" repeatable="true"/>
+        <item url="/service/center.jsp" targetFileName="/service/center.html" expireTime="7d" repeatable="true"/>
+        <item url="/harborII/welcomeAction!welcome.dox" targetFileName="/harborII/welcome.html" expireTime="10m"  repeatable="true"/>
+        <item url="/information/index.jsp" targetFileName="/information/index.html" expireTime="5m" repeatable="true"/>
+        <item url="/certificate/index.do" targetFileName="/certificate/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/marketing/index.jsp" targetFileName="/marketing/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/index.jsp" targetFileName="/match/index.html" expireTime="10m" repeatable="true"/>
+
+        <item url="/news/index.jsp" targetFileName="/news/index.html" expireTime="5m" repeatable="true"/>
+
+
+        <!--约会大厅-->
+        <item url="/marketing/index.jsp" targetFileName="/marketing/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/marketing/mark_index.jsp" targetFileName="/marketing/mark_index.html" expireTime="10m" repeatable="true"/>
+        <item url="/financier/financier_club.jsp" targetFileName="/financier/financier_club.html" expireTime="10m" repeatable="true"/>
+        <item url="/marketing/marketing_ymzs_f.jsp" targetFileName="/marketing/marketing_ymzs_f.html" expireTime="10m" repeatable="true"/>
+
+        <!--认证大厅-->
+        <item url="/certificate/index.do" targetFileName="/certificate/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/certificate/certificate_shl.jsp" targetFileName="/certificate/certificate_shl.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/supportCenter.do" targetFileName="/certificate/supportCenter.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/enterpriseList.do" targetFileName="/certificate/enterpriseList.html" expireTime="7d" repeatable="true"/>
+        <item url="/certificate/certificate_gurzzx.jsp" targetFileName="/certificate/certificate_gurzzx.html" expireTime="7d" repeatable="true"/>
+
+        <!--赛事大厅-->
+        <item url="/match/index.jsp" targetFileName="/match/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/jbpzq/index.jsp" targetFileName="/match/jbpzq/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/all_activity.jsp" targetFileName="/match/all_activity.html" expireTime="10m" repeatable="true"/>
+        <item url="/match/sportsMatchNoticeList.do" targetFileName="/match/sportsMatchNoticeList.html" expireTime="10m" repeatable="true"/>
+
+        <!--融资城学院-->
+        <item url="/fcc/index.do" targetFileName="/fcc/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/fcc/learningHall.do" targetFileName="/fcc/learningHall.html" expireTime="10m" repeatable="true"/>
+        <item url="/fcc/qualification.jsp" targetFileName="/fcc/qualification.html" expireTime="7d" repeatable="true"/>
+        <item url="/fcc/information.do" targetFileName="/fcc/information.html" expireTime="10m" repeatable="true"/>
+        <item url="/forum/forumIndex.do" targetFileName="/forum/forumIndex.html" expireTime="10m" repeatable="true"/>
+        <item url="/hr/index1.jsp" targetFileName="/hr/index1.html" expireTime="1d" repeatable="true"/>
+        <item url="/hr/about.jsp" targetFileName="/hr/about.html" expireTime="1d" repeatable="true"/>
+        <item url="/hr/iamin352.do" targetFileName="/hr/iamin352.html" expireTime="1d" repeatable="true"/>
+        <item url="/fcc/introduction.jsp" targetFileName="/fcc/introduction.html" expireTime="7d" repeatable="true"/>
+
+        <!--资讯大厅-->
+        <item url="/news/index.jsp" targetFileName="/news/index.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/expert_view_list.jsp" targetFileName="/news/expert_view_list.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1742&amp;root=yes" targetFileName="/news/newslist_ttid-1742_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1743" targetFileName="/news/newslist_ttid-1743.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1744" targetFileName="/news/newslist_ttid-1744.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1745" targetFileName="/news/newslist_ttid-1745.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1746" targetFileName="/news/newslist_ttid-1746.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1747" targetFileName="/news/newslist_ttid-1747.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1748" targetFileName="/news/newslist_ttid-1748.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1749" targetFileName="/news/newslist_ttid-1749.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1750" targetFileName="/news/newslist_ttid-1750.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1751" targetFileName="/news/newslist_ttid-1751.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1752" targetFileName="/news/newslist_ttid-1752.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1753" targetFileName="/news/newslist_ttid-1753.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1754" targetFileName="/news/newslist_ttid-1754.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1755" targetFileName="/news/newslist_ttid-1755.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1756" targetFileName="/news/newslist_ttid-1756.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1757" targetFileName="/news/newslist_ttid-1757.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1758" targetFileName="/news/newslist_ttid-1758.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1759" targetFileName="/news/newslist_ttid-1759.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1760" targetFileName="/news/newslist_ttid-1760.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1761" targetFileName="/news/newslist_ttid-1761.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1762" targetFileName="/news/newslist_ttid-1762.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1763" targetFileName="/news/newslist_ttid-1763.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1764" targetFileName="/news/newslist_ttid-1764.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1772" targetFileName="/news/newslist_ttid-1772.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1773" targetFileName="/news/newslist_ttid-1773.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1774" targetFileName="/news/newslist_ttid-1774.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1844&amp;root=yes" targetFileName="/news/newslist_ttid-1844_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1845" targetFileName="/news/newslist_ttid-1845.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1846" targetFileName="/news/newslist_ttid-1846.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1847" targetFileName="/news/newslist_ttid-1847.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2027" targetFileName="/news/newslist_ttid-2027.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=1849&amp;root=yes" targetFileName="/news/newslist_ttid-1849_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1850" targetFileName="/news/newslist_ttid-1850.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=1851" targetFileName="/news/newslist_ttid-1851.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2023" targetFileName="/news/newslist_ttid-2023.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=426" targetFileName="/news/newslist_ttid-426.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=428" targetFileName="/news/newslist_ttid-428.html" expireTime="5m" repeatable="true"/>
+
+        <item url="/news/news.do?call=newslist&amp;ttid=2024&amp;root=yes" targetFileName="/news/newslist_ttid-2024_root-yes.html" expireTime="1m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2025" targetFileName="/news/newslist_ttid-2025.html" expireTime="5m" repeatable="true"/>
+        <item url="/news/news.do?call=newslist&amp;ttid=2026" targetFileName="/news/newslist_ttid-2026.html" expireTime="5m" repeatable="true"/>
+
+        <!--帮助中心-->
+        <item url="/help/index.jsp" targetFileName="/help/index.html" expireTime="1h" repeatable="true"/>
+
+        <!--网安大厅-->
+        <item url="/safewall/index.do" targetFileName="/safewall/index.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/queryCooperation.do" targetFileName="/safewall/queryCooperation.html" expireTime="1d"  repeatable="true"/>
+        <item url="/safewall/moreBlacklist.do" targetFileName="/safewall/moreBlacklist.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/moreKnowledge.do" targetFileName="/safewall/moreKnowledge.html" expireTime="10m" repeatable="true"/>
+        <item url="/safewall/law.jsp" targetFileName="/safewall/law.html" expireTime="1d" repeatable="true"/>
+    </site>
+
+</root>

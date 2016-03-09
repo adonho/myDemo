@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- 2013-10-25 zhangshsh add this file -->
+
+<properties version="1.0">
+    <comment>服务器配置文件</comment>
+
+    <!-- disable the jump for page -->
+    <entry key="page.jump.disable">false</entry>
+    <!-- jump the rows per page -->
+    <entry key="page.rows">20,30,50,80</entry>
+    <!-- rows per page -->
+    <entry key="row.per.page">5</entry>
+
+    <!-- sets the default aux value for any non configured caches -->
+    <entry key="jcs.default">DC</entry>
+    <entry key="jcs.default.cacheattributes.MemoryCacheName">org.apache.jcs.engine.memory.lru.LRUMemoryCache</entry>
+    <entry key="jcs.default.cacheattributes.MaxObjects">500</entry>
+    <entry key="jcs.default.elementattributes">org.apache.jcs.engine.ElementAttributes</entry>
+    <entry key="jcs.default.elementattributes.MaxLifeSeconds">300</entry>
+    <entry key="jcs.auxiliary.DC">org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheFactory</entry>
+    <entry key="jcs.auxiliary.DC.attributes">org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCacheAttributes</entry>
+    <entry key="jcs.auxiliary.DC.attributes.DiskPath">d:/index</entry>
+    <entry key="cache.path">/viewChannel,/listColumn,/viewTemplate,/listResource,/viewColumnResource,/downloadResource,/freePage</entry>
+    <entry key="spend.enable">true</entry>
+
+    <entry key="velocity.log">e:/velocity.log</entry>
+    <entry key="spring.context.config">classpath*:/springConfig/dataSource/dataSource-mysql.xml,classpath*:/springConfig/dataSource/dataSource-mssql.xml,classpath*:/app-config/applicationContext-dataSourceJDBC.xml,classpath*:/app-config/applicationContext-hibernate.xml,classpath*:/app-config/applicationContext-commons.xml,classpath*:/app-config/applicationContext.xml,classpath*:/app-config/applicationContext-approve.xml,classpath*:/app-config/applicationContext-JGT.xml,classpath*:/app-config/applicationContext-cache.xml,classpath*:/app-config/applicationContext-bookTicket.xml,classpath*:/app-config/applicationContext-schedule.xml,classpath*:/app-config/applicationContext-supervisor.xml,classpath*:/app-config/applicationContext-financing-package.xml,classpath*:/springConfig/system/beans.xml,classpath*:/etc/applicationContext3-beans/applicationContext3-harborII-web.xml</entry>
+
+    <entry key="mail.sender.from">${mail.send.username}</entry>
+
+    <!-- for www -->
+    <entry key="www.website.url">http://www.352.com</entry>
+    <entry key="www.image.upload.path">/data/blossom/upimages/</entry>
+    <entry key="www.hr.upload.path">/data/blossom/hr/</entry>
+    <entry key="www.image.upload.path.temp">/data/blossom/upimages/temp/</entry>
+    <entry key="www.image.command.path">/app/soft/imageMagick/bin/convert</entry>
+    <entry key="www.image.upload.ur">http://www.352.com/upimages/</entry>
+    <entry key="www.download.upload.ur">http://www.352.com/uploadfiles/</entry>
+
+    <!-- 通讯通，现网 -->
+    <entry key="www.chat.server.ip">${chat.server.ip}</entry>
+    <entry key="www.chat.server.url">${chat.server.url}</entry>
+    <entry key="www.chat.server.service.url">${chat.server.service.url}</entry>
+    <entry key="chat.service.mode">${chat.service.mode}</entry>
+    <entry key="chat.server.key">${chat.server.key}</entry>
+
+    <entry key="www.chat.client.js.version.no">C20131129</entry>
+    <entry key="www.chat.client.js.version.style">min</entry>
+
+    <!-- for localhost -->
+    <entry key="local.website.url">http://localhost:8888/blossomWeb</entry>
+    <entry key="local.image.upload.path">D:/tomcat/webapps/upimages/</entry>
+    <entry key="local.image.upload.path.temp">D:/tomcat/webapps/upimages/temp/</entry>
+    <entry key="local.image.command.path">C:/Program Files/ImageMagick-6.3.9-Q8/convert.exe</entry>
+    <entry key="local.image.upload.ur">http://localhost:8888/upimages/</entry>
+    <entry key="local.hr.upload.path">D:/tomcat/webapps/hr/</entry>
+    <entry key="www.chat.client.js.version.no">C20131129</entry>
+    <entry key="www.chat.client.js.version.style">min</entry>
+
+    <!-- 开发用 -->
+    <entry key="local.chat.server.ip">${chat.server.ip}</entry>
+    <entry key="local.chat.server.url">http://113.105.93.155:7070</entry>
+    <entry key="local.chat.server.service.url">http://113.105.93.155:9090</entry>
+    <entry key="local.chat.client.js.version.no">C20131129</entry>
+    <entry key="local.chat.client.js.version.style">full</entry>
+    <!-- service staff communication session timeout (S) -->
+    <entry key="comsession.timeout">600</entry>
+
+    <entry key="local.ipaddr.path">F:/ip/QQWry.DAT</entry>
+    <entry key="remote.ipaddr.path">/data/blossom/resource/ip/QQWry.Dat</entry>
+
+    <!-- add for internationalize -->
+    <entry key="locale.lang.name">zh_CN</entry>
+
+    <!-- BCDL config -->
+    <!-- 资金注入匹配时间（分钟） -->
+    <entry key="bcdl.check.time">10080</entry>
+    <!--人工入账对应的监管通账号-->
+    <entry key="bcdl.human.supperaccount">8618381301069987</entry>
+    <!--查询冲正记录对应的银行记录时的天数限制，0则不限制-->
+    <entry key="bcdl.reverse.limitation">30</entry>
+
+    <!--异常入账记录通知接收人（财务部门），多个接收人使用英文逗号分隔","-->
+    <entry key="bcdl.notify.financial.receivers">15692083337,13682623389</entry>
+    <!--异常报警通知接收人（技术部门），多个接收人使用英文逗号分隔","-->
+    <entry key="bcdl.notify.technical.receivers">15999683787,18603011822,13823265664,13510983114</entry>
+
+
+    <!--银企直连广发银行 config-->
+    <!-- 指定字符编码，广发银企直连要求GBK编码 -->
+    <entry key="bcdl.encode">GBK</entry>
+    <!-- commGate的ip地址 -->
+    <entry key="bcdl.gatewayIp">${bcdl.gatewayIp}</entry>
+    <!-- commGate的port -->
+    <entry key="bcdl.gatewayPort">${bcdl.gatewayPort}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.account">${bcdl.account}</entry>
+    <!-- 操作员 根据银行分配指定 -->
+    <entry key="bcdl.operator">${bcdl.operator}</entry>
+    <!-- 操作密码 -->
+    <entry key="bcdl.password">${bcdl.password}</entry>
+    <!-- 网银客户号，根据分配指定 -->
+    <entry key="bcdl.cifMaster">${bcdl.cifMaster}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.startDate">2013-02-19</entry>
+    <!-- 网银交易出账账号 -->
+    <entry key="bcdl.outAcc">${bcdl.outAcc}</entry>
+
+    <!--银企直连农业银行 config-->
+    <!-- 指定字符编码，农行银企直连要求GBK编码 -->
+    <entry key="bcdl.abc.encode">GBK</entry>
+    <!-- 客户端ip地址 -->
+    <entry key="bcdl.abc.gatewayIp">${bcdl.abc.gatewayIp}</entry>
+    <!-- 客户端port -->
+    <entry key="bcdl.abc.gatewayPort">${bcdl.abc.gatewayPort}</entry>
+    <!-- 客户端操作员号 -->
+    <entry key="bcdl.abc.operator">${bcdl.abc.operator}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.abc.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.abc.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.abc.startDate">2014-10-18</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.abc.account">${bcdl.abc.account}</entry>
+    <!--应答结果文件FTP服务器配置信息 IP -->
+    <entry key="bcdl.abc.ftp.server.ip">${bcdl.abc.ftp.server.ip}</entry>
+    <!--应答结果文件FTP服务器配置信息 PORT -->
+    <entry key="bcdl.abc.ftp.server.port">${bcdl.abc.ftp.server.port}</entry>
+    <!--应答结果文件FTP服务器配置信息 USER -->
+    <entry key="bcdl.abc.ftp.server.user">${bcdl.abc.ftp.server.user}</entry>
+    <!--应答结果文件FTP服务器配置信息 PASSWORD -->
+    <entry key="bcdl.abc.ftp.server.password">${bcdl.abc.ftp.server.password}</entry>
+    <!--应答结果文件FTP服务器配置信息 服务器文件路径 -->
+    <entry key="bcdl.abc.ftp.server.filepath">./</entry>
+    <!--应答结果文件FTP服务器配置信息 客户端文件路径 -->
+    <entry key="bcdl.abc.ftp.client.filepath">${bcdl.abc.ftp.client.filepath}</entry>
+
+    <!--银企直连工商银行 config start -->
+    <!-- 指定字符编码，工商银企直连要求GBK编码 -->
+    <entry key="bcdl.icbc.encode">GBK</entry>
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.icbc.gatewayIp">${bcdl.icbc.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.icbc.gatewayPort">${bcdl.icbc.gatewayPort}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.icbc.account">${bcdl.icbc.account}</entry>
+    <!-- 分配的证书ID -->
+    <entry key="bcdl.icbc.certificate.id">${bcdl.icbc.certificate.id}</entry>
+    <!-- 版本号 -->
+    <entry key="bcdl.icbc.version">0.0.0.1</entry>
+    <!-- 交易代码 -->
+    <entry key="bcdl.icbc.transCode">QHISD</entry>
+    <!-- 交易代码 -->
+    <entry key="bcdl.icbc.transCode2">QPD</entry>
+    <!-- 企业注册时的归属银行编号 -->
+    <entry key="bcdl.icbc.bankCode">102</entry>
+    <!-- 企业注册时的归属编码 -->
+    <entry key="bcdl.icbc.cis">400090002918904</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.icbc.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.icbc.startDate">20140920</entry>
+    <!-- 发生额下限 -->
+    <entry key="bcdl.icbc.minAmt">0</entry>
+    <!-- 发生额上限 -->
+    <entry key="bcdl.icbc.maxAmt">99999999999999999</entry>
+    <!--银企直连工商银行 config end -->
+
+    <!--银企直连招商银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.cmb.gatewayIp">${bcdl.cmb.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.cmb.gatewayPort">${bcdl.cmb.gatewayPort}</entry>
+    <!-- 客户端登陆用户 -->
+    <entry key="bcdl.cmb.loginUser">${bcdl.cmb.loginUser}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.cmb.account">${bcdl.cmb.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.cmb.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.cmb.startDate">20141108</entry>
+    <!--银企直连招商银行 config end -->
+
+    <!--银企直连兴业银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.cib.gatewayIp">${bcdl.cib.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.cib.gatewayPort">${bcdl.cib.gatewayPort}</entry>
+    <!-- 操作员 -->
+    <entry key="bcdl.cib.operator">${bcdl.cib.operator}</entry>
+    <!-- 操作员密码 -->
+    <entry key="bcdl.cib.operator.password">${bcdl.cib.operator.password}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.cib.account">${bcdl.cib.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.cib.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.cib.startDate">20150110</entry>
+    <!--银企直连兴业银行 config end -->
+
+    <!--银企直连中国银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.boc.gatewayIp">${bcdl.boc.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.boc.gatewayPort">${bcdl.boc.gatewayPort}</entry>
+    <!-- 客户端ip地址(中行注册) -->
+    <entry key="bcdl.boc.terminalIp">${bcdl.boc.terminalIp}</entry>
+    <!-- 企业在中行网银系统的客户编码 -->
+    <entry key="bcdl.boc.customerId">10393456</entry>
+    <!-- 操作员 -->
+    <entry key="bcdl.boc.operator">${bcdl.boc.operator}</entry>
+    <!-- 操作员密码 -->
+    <entry key="bcdl.boc.operator.password">${bcdl.boc.operator.password}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.boc.account">${bcdl.boc.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.boc.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.boc.startDate">20141122</entry>
+    <!--银企直连中国银行 config end -->
+
+    <!--银企直连中信银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.citic.gatewayIp">${bcdl.citic.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.citic.gatewayPort">${bcdl.citic.gatewayPort}</entry>
+    <!-- 客户端登陆用户 -->
+    <entry key="bcdl.citic.loginUser">${bcdl.citic.loginUser}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.citic.account">${bcdl.citic.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.citic.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.citic.startDate">20150313</entry>
+    <!--银企直连中信银行 config end -->
+
+    <!--银企直连交通银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.bcm.gatewayIp">${bcdl.bcm.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.bcm.gatewayPort">${bcdl.bcm.gatewayPort}</entry>
+    <!-- 客户端登陆用户 -->
+    <entry key="bcdl.bcm.loginUser">${bcdl.bcm.loginUser}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.bcm.account">${bcdl.bcm.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.bcm.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.bcm.startDate">20150601</entry>
+    <!--银企直连中信银行 config end -->
+
+    <!--银企直连平安银行 config start -->
+    <!-- 客户端的ip地址 -->
+    <entry key="bcdl.pab.gatewayIp">${bcdl.pab.gatewayIp}</entry>
+    <!-- 客户端的port -->
+    <entry key="bcdl.pab.gatewayPort">${bcdl.pab.gatewayPort}</entry>
+    <!-- 企业的银行账号 -->
+    <entry key="bcdl.pab.account">${bcdl.pab.account}</entry>
+    <!-- 是否启用处理的起始日期，但设置为false时，使用DB中最后一笔银行转账记录的处理时间 -->
+    <entry key="bcdl.pab.startDate.enable">false</entry>
+    <!-- 处理的起始日期，bcdl.startDate.enable=true时启用 (当DB中无银行转账记录时，也使用此起始日期）-->
+    <entry key="bcdl.pab.startDate">20150626</entry>
+    <!--银企直连平安银行 config end -->
+
+    <!-- 宝贝拆借 config -->
+    <!-- 约会中心服务号  -->
+    <entry key="lend.marketing.passNum">35202050000</entry>
+    <!-- 约会中心专用监管通账号 -->
+    <entry key="lend.marketing.jgtAccount">8618381212090001</entry>
+
+    <!--监管通特别监管 config-->
+    <!-- 监管回收站账号  -->
+    <entry key="super.special.recycleAccount">8618381403131755</entry>
+
+    <!--身份证验证账号-->
+    <entry key="citizen.data.query.account">${citizen.data.query.account}</entry>
+    <entry key="citizen.data.query.password">${citizen.data.query.password}</entry>
+    <!--身份证验证账号-->
+
+
+</properties>

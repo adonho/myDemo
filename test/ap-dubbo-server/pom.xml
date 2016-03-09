@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent> 
+        <groupId>cn.352.java</groupId>
+        <artifactId>dev-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../modules/parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>cn.352.java</groupId>
+    <artifactId>dev-blossom-dubbo-server-ap</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>dev-blossom-dubbo-server-ap</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <!-- logging -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
+        <!-- zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+
+        <!-- zkclient -->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+
+        <!-- dubbo -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-dubbo</artifactId>
+        </dependency>
+
+        <!-- hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+        </dependency>
+
+        <!-- commons-dbcp -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+        </dependency>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- mssql -->
+        <dependency>
+            <groupId>com.microsoft</groupId>
+            <artifactId>jdbc-sqlserver</artifactId>
+        </dependency>
+
+        <!-- commons-lang -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+
+        <!-- commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <!-- commons-httpclient -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javamail</groupId>
+            <artifactId>javamail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.struts.xwork</groupId>
+            <artifactId>xwork-core</artifactId>
+        </dependency>
+
+        <!-- 二维码生成器Begin -->
+        <dependency>
+            <groupId>com.swetake</groupId>
+            <artifactId>swetake-drcode</artifactId>
+        </dependency>
+        <!-- 二维码生成器End -->
+
+        <!-- lucene搜索索引Begin -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-collation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.dean.third</groupId>
+            <artifactId>IKAnalyzer</artifactId>
+        </dependency>
+        <!-- lucene搜索索引End -->
+
+        <!-- cglib-nodep -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.igniterealtime.smack</groupId>
+            <artifactId>smack</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.igniterealtime.smack</groupId>
+            <artifactId>smackx</artifactId>
+        </dependency>
+
+        <!-- 身份证验证 start -->
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom</groupId>
+            <artifactId>axiom-impl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-kernel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-adb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-local</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-http</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.ezmorph</groupId>
+            <artifactId>ezmorph</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.ws.xmlschema</groupId>
+            <artifactId>xmlschema-core</artifactId>
+        </dependency>
+        <!--提供方jar包-->
+        <dependency>
+            <groupId>cn.com.nciic</groupId>
+            <artifactId>sfxxrz</artifactId>
+        </dependency>
+        <!-- 身份证验证 end -->
+
+        <!-- ########### cn.352.java begin ########### -->
+        <!-- shaoyanlin使用我们自己的iText.2.1.8(jdk1.6)替换原来的iText.2.1.7(jdk1.4)。 -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-iText</artifactId>
+        </dependency>
+
+        <!-- dev-mvc -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-mvc</artifactId>
+        </dependency>
+
+        <!-- dev-blossom-status-manager -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-status-manager</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- dev-blossom-common -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- dev-blossom-entity -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-entity</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-entity-mapping-main</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-entity-mapping-supervisor</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- dev-blossom-entity-mssql -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-entity-mssql</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-cache-engine</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- dev-blossom-service-if -->
+        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-service-if</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+	        <dependency>
+            <groupId>cn.352.java</groupId>
+            <artifactId>dev-blossom-common-auth</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+
+        <!-- Hibernate 二级缓存 -->
+        <dependency>
+            <groupId>com.googlecode</groupId>
+            <artifactId>hibernate-memcached</artifactId>
+        </dependency>
+
+        <!-- 融资通DB分离采用aop配置方式-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <directory>target</directory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <outputDirectory>target/classes</outputDirectory>
+
+        <plugins>
+            <!-- clean lib目录下的jar -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>lib</directory>
+                            <includes>
+                                <include>**/*.jar</include>
+                            </includes>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+
+            <!-- 将 项目所依赖的jar 和 自身的jar 放到lib目录下 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!-- 将项目所依赖的包放到lib目录下 -->
+                        <id>copy-dependencies-jars</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+
+                            <!--  排除 jdk 的tools.jar 和 rt.jar -->
+                            <excludeArtifactIds>tools,rt</excludeArtifactIds>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <!-- 将项目自身的包放到lib目录下 -->
+                        <id>copy-my-jar</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>cn.352.java</groupId>
+                                    <artifactId>${project.artifactId}</artifactId>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>lib</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 消除编译时生成的临时target目录 -->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <delete dir="target" />
+                           </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.demo.bean.MemberSafe" table="tb_member_safe">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <many-to-one name="member" class="com.demo.bean.Member" fetch="select" lazy="false">
+            <column name="member_id">
+                <comment>关联外键</comment>
+            </column>
+        </many-to-one>
+        <property name="bindTarget" type="java.lang.String">
+            <column name="bind_target">
+                <comment>绑定邮箱\手机号码</comment>
+            </column>
+        </property>
+        <property name="bindType" type="java.lang.Short">
+            <column name="bind_type">
+                <comment>手机\邮箱类型</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="create_date">
+                <comment>创建日期</comment>
+            </column>
+        </property>
+
+    </class>
+</hibernate-mapping>

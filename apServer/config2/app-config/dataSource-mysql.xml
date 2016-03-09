@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="searchSystemEnvironment" value="true"/>
+        <property name="location" value="file:${envFilePath}"/>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- driver for MySQL-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+
+        <property name="url" value="jdbc:mysql://${db.mvc.url}?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull"/>
+        <property name="username" value="${db.mvc.username}"/>
+        <property name="password" value="${db.mvc.password}"/>
+
+        <property name="initialSize" value="5"/>
+        <property name="maxActive" value="200"/>
+        <property name="maxIdle" value="8"/>
+        <property name="minIdle" value="0"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+
+        <!--<property name="mappingResources" value="Book.hbm.xml"/>-->
+
+        <!--<property name="mappingDirectoryLocations">-->
+            <!--<list>-->
+                <!--<value>classpath:/com/demo/hibernate/mapper</value>-->
+            <!--</list>-->
+        <!--</property>-->
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/hibernate-mapper-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <!--Dialect-->
+                <prop key="hibernate.dialect">com.demo.common.util.MMySQLDialect</prop>
+                <prop key="hibernate.use_outer_join">true</prop>
+
+                <prop key="hibernate.show_sql">true</prop>
+
+            </props>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+
+        <property name="mappingResources">
+            <value>News.hbm.xml</value>
+        </property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-main-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.use_outer_join">true</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 缓存失效时间 -->
+                <!--<prop key="hibernate.memcached.cacheTimeSeconds">600</prop>-->
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 2013-04-16 zhangshsh add begin -->
+    <bean id="myDataSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceMyData"/></property>
+
+         <property name="mappingResources">
+            <value>News.hbm.xml</value>
+        </property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-main-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                 <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                 <prop key="hibernate.use_outer_join">true</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+         </property>
+    </bean>
+
+    <!-- 2013-04-16 zhangshsh add end -->
+    <bean id="SMSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceMAS"/></property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mssql-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.use_outer_join">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 2013-12-03 lubo add begin -->
+    <bean id="sysMsgDataSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceSysMsg"/></property>
+
+        <property name="mappingResources">
+            <value>News.hbm.xml</value>
+        </property>
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-main-*.jar</value>
+            </list>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath*:/etc/hibernate-mappings/*.hbm.xml</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.use_outer_join">true</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- 2013-12-03 lubo add end -->
+
+    <!--2014-02-18 zengjh add begin-->
+    <bean id="salarySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceSalary"/></property>
+
+        <property name="mappingResources">
+            <value>News.hbm.xml</value>
+        </property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-main-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.use_outer_join">false</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--2014-02-18 zengjh add begin-->
+    <bean id="supervisorSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceSupervisor"/></property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-supervisor-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.use_outer_join">false</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 2014-09-13 anyunliang add begin -->
+    <bean id="openFireSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceOpenFire"/></property>
+
+        <property name="mappingResources">
+            <value>News.hbm.xml</value>
+        </property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-main-*.jar</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.use_outer_join">false</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- 2014-09-13 anyunliang add end -->
+
+    <!-- 2015-01-27 add rztDb begin -->
+    <bean id="rztSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSourceRzt"/></property>
+
+        <property name="mappingJarLocations">
+            <list>
+                <value>file:${MyAppHome}/lib/dev-blossom-entity-mapping-rzt-*.jar</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.mobile.framework.util.MMySQLDialect</prop>
+                <prop key="hibernate.use_outer_join">true</prop>
+
+                <!-- 开启二级缓存-->
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <!-- 设置缓存类-->
+                <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>
+                <!-- 设置memcache缓存服务器端口 -->
+                <prop key="hibernate.memcached.servers">${cache.memcache.server.a.url} ${cache.memcache.server.b.url}</prop>
+                <!-- 缓存失效时间 -->
+                <!--<prop key="hibernate.memcached.cacheTimeSeconds">600</prop>-->
+                <!-- 设置二级缓存的前缀名称 -->
+                <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>
+                <!-- 否使用结构化的方式缓存对象  -->
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <!-- 是否缓存查询结果 -->
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- 2015-01-27 add rztDb end -->
+
+    <bean id="salaryHibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate"  singleton="false">
+        <property name="sessionFactory"><ref bean="salarySessionFactory"/></property>
+    </bean>
+    <!--2014-02-18 zengjh add end-->
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate" singleton="false">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- 2014-08-05 add supervisor begin -->
+    <bean id="supervisorHibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate" singleton="false">
+        <property name="sessionFactory"><ref bean="supervisorSessionFactory"/></property>
+    </bean>
+    <!-- 2014-08-05 add supervisor end -->
+
+    <!-- 2015-01-27 add rztDb begin -->
+    <bean id="rztHibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate"  singleton="false">
+        <property name="sessionFactory">
+            <ref bean="rztSessionFactory"/>
+        </property>
+        <!--<property name="cacheQueries" value="true"/>-->
+    </bean>
+    <!-- 2015-01-27 add rztDb end -->
+</beans>

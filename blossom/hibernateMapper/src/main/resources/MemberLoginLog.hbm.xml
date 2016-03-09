@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.demo.bean.MemberLoginLog" table="tb_member_login_log">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="native"/>
+        </id>
+        <many-to-one name="member" class="com.demo.bean.Member" fetch="select" lazy="false">
+            <column name="member_id">
+                <comment>关联外键</comment>
+            </column>
+        </many-to-one>
+        <property name="loginTarget" type="java.lang.String">
+            <column name="login_target">
+                <comment>登录昵称\手机号</comment>
+            </column>
+        </property>
+        <property name="loginIP" type="java.lang.String">
+            <column name="login_ip">
+                <comment>登录IP</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="create_date">
+                <comment>登录日期</comment>
+            </column>
+        </property>
+        <property name="loginClient" type="java.lang.Integer">
+            <column name="login_client">
+                <comment>登录客户端</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

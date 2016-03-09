@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- 2013-05-07 zhangshsh add this file -->
+
+<properties version="1.0">
+   <comment>服务器配置文件. 修改后立即生效,不需要重启服务器.</comment>
+
+    <!-- 短信通道 -->
+    <!-- 通道号 0: ORIGINAL; 1: MONTNET; 2: UMS; 3: SMS_MODEM; 4: SMS_MODEM_B; 5: SMS_MODEM_C; default:0 -->
+    <!-- 短信通道 enable指定  -->
+    <entry key="sms.channel.0.enable">0</entry>
+    
+</properties>

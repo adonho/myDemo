@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+     <!--邮件发送器 -->
+    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
+        <!--<property name="host" value="${mail.send.host}" />-->
+        <!--<property name="username" value="${mail.send.username}" />-->
+        <!--<property name="password" value="${mail.send.password}" />-->
+        <!--<property name="javaMailProperties">-->
+            <!--<props>-->
+                <!--<prop key="mail.smtp.auth">true</prop>-->
+                <!--&lt;!&ndash; gmail smtp server必须参数 &ndash;&gt;-->
+                <!--<prop key="mail.smtp.starttls.enable">true</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+     <!--邮件服务类 -->
+    <!--<bean id="MailService" class="com.blossom.common.util.email.MailService">-->
+        <!--<property name="mailSender" ref="mailSender"/>-->
+        <!--<property name="configuration" ref="freemarkerConfiguration"></property>-->
+        <!--<property name="ENCODING" value="utf-8"/>-->
+    <!--</bean>-->
+
+     <!--&lt;!&ndash;用于生成HTML邮件内容的Freemarker配置 &ndash;&gt;-->
+    <!--<bean id="freemarkerConfiguration" class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">-->
+        <!--&lt;!&ndash; <property name="templateLoaderPath" value="classpath:/freemarker-template" /> &ndash;&gt;-->
+        <!--<property name="templateLoaderPath" value="/WEB-INF/freemarker-template"/>-->
+    <!--</bean>-->
+     <!--&lt;!&ndash;end 邮件发送板块 &ndash;&gt;-->
+
+    <bean id="serviceLocator" class="com.demo.common.util.ServiceLocator"  lazy-init="false"/>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="hibernateTemplate" class="com.demo.common.util.hibernate.HibernateTemplate" scope="prototype">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 事务管理器配置, Hibernate单数据源事务 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <description>事务管理器</description>
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <bean id="transactionProxyBean" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+        <description>事务代理工程bean</description>
+        <property name="transactionManager" ref="transactionManager" />
+        <property name="proxyTargetClass" value="false" />
+        <property name="transactionAttributes">
+            <props>
+                <prop key="*">PROPAGATION_REQUIRED,-Exception</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
+    <context:component-scan base-package="com.demo.service.impl,com.demo.dao.impl"/>
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <bean id="dubboInit" class="com.dome.ap.monitor.DubboInit"/>
+
+    <!-- 数据库连接数采集Begin -->
+    <!--<bean id="connectNumQuartz" name="connectNumQuartz"-->
+          <!--class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetBeanName">-->
+            <!--<value>connectNumManager</value>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>getConnectNum</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="connectNumTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">-->
+        <!--<description>连接数采集</description>-->
+        <!--<property name="jobDetail">-->
+            <!--<ref bean="connectNumQuartz"/>-->
+        <!--</property>-->
+        <!--<property name="cronExpression">-->
+            <!--<value>0 0/1 * * * ?</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">-->
+        <!--<property name="triggers">-->
+            <!--<list>-->
+                <!--<ref local="connectNumTrigger"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="connectNumManager" class="com.test">-->
+    <!--</bean>-->
+    <!-- 数据库连接数采集End -->
+</beans>
